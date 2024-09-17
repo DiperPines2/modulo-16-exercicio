@@ -6,7 +6,7 @@ const obfuscate = require('gulp-obfuscate') //transforma os arquivos .js ilegive
 const imagemin = require('gulp-imagemin') //comprime imagens
 
 function comprimeImagem() {
-    return gulp.src('./souce/images/*')
+    return gulp.src('./source/images/*')
         .pipe(imagemin())
         .pipe(gulp.dest('./build/images'))
 }
@@ -28,7 +28,7 @@ function compilaSass() {    //funcao que compila o sass
         .pipe(gulp.dest('./build/styles')) //destino da compilação.
 }
 
-exports.watch = function() {
+exports.default = function() {
     gulp.watch('./source/styles/*.scss', {ignoreInitial: false}, gulp.series(compilaSass))
     gulp.watch('./source/scripts/*.js', {ignoreInitial: false}, gulp.series(comprimeJavaScript))
     gulp.watch('./source/images/*', {ignoreInitial: false}, gulp.series(comprimeImagem))
