@@ -1,0 +1,1 @@
+let n1=2,n2=4,soma=n1+n2;function ಠ_ಠ992(ಠ_ಠ993){return console.log(ಠ_ಠ993)}
